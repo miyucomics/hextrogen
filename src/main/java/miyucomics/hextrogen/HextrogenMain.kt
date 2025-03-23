@@ -23,7 +23,7 @@ import net.minecraft.server.network.ServerGamePacketListenerImpl
 class HextrogenMain : ModInitializer {
 	override fun onInitialize() {
 		Registry.register(HexActions.REGISTRY, id("dash"), ActionRegistryEntry(HexPattern.fromAngles("qaqqqqdweee", HexDir.NORTH_EAST), OpDash()))
-		Registry.register(HexActions.REGISTRY, id("refresh_dashes"), ActionRegistryEntry(HexPattern.fromAngles("qaqqadwdwd", HexDir.NORTH_EAST), OpRefreshDashes()))
+		Registry.register(HexActions.REGISTRY, id("refresh_dashes"), ActionRegistryEntry(HexPattern.fromAngles("qaqqeawawa", HexDir.NORTH_EAST), OpRefreshDashes()))
 		ServerPlayNetworking.registerGlobalReceiver(DASH_CHANNEL) { _: MinecraftServer, player: ServerPlayer, _: ServerGamePacketListenerImpl, _: FriendlyByteBuf, _: PacketSender -> DASH_CRITERION.grant(player) }
 	}
 
