@@ -26,7 +26,7 @@ author = "miyucomics"
 show_landing_text = false
 
 [extra.hexcasting]
-_pattern_regex = { "!Raw" = 'Registry\.register\(HexActions\.REGISTRY, id\("(?P<id>[^"]+)"\), ActionRegistryEntry\(HexPattern\.fromAngles\("(?P<pattern>[qweasd]+)", HexDir\.(?P<startdir>\w+)' }
+_pattern_regex = { "!Raw" = 'Registry\.register\(HexActions\.REGISTRY, id\("(?P<name>[^"]+)"\), ActionRegistryEntry\(HexPattern\.fromAngles\("(?P<signature>[qweasd]+)", HexDir\.(?P<startdir>\w+)' }
 
 [[extra.hexcasting.pattern_stubs]]
 path = "{^^^_common.package}/HextrogenMain.kt"
