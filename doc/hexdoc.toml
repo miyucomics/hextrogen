@@ -1,0 +1,37 @@
+modid = "hextrogen"
+book = "hexcasting:thehexbook"
+default_lang = "en_us"
+default_branch = "main"
+
+resource_dirs = [
+    "resources",
+    "{_common.src}/main/resources",
+    { modid="hexcasting" },
+    { modid="minecraft" },
+    { modid="hexdoc" },
+]
+export_dir = "src/hexdoc_hextrogen/_export/generated"
+
+[template]
+icon = "icon.png"
+include = [
+    "hextrogen",
+    "hexcasting",
+    "hexdoc",
+]
+
+[template.args]
+mod_name = "Hextrogen"
+author = "miyucomics"
+show_landing_text = false
+
+[extra.hexcasting]
+_pattern_regex = { "!Raw" = 'Registry\.register\(HexActions\.REGISTRY, id\("(?P<id>[^"]+)"\), ActionRegistryEntry\(HexPattern\.fromAngles\("(?P<pattern>[qweasd]+)", HexDir\.(?P<startdir>\w+)' }
+
+[[extra.hexcasting.pattern_stubs]]
+path = "{^^^_common.package}/HextrogenMain.kt"
+regex = "{^_pattern_regex}"
+
+[_common]
+src = "../src"
+package = "{src}/main/java/miyucomics/hextrogen"
