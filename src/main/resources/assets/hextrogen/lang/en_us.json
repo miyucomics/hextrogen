@@ -1,6 +1,6 @@
 {
-	"advancement.hextrogen.unlock_page.title": "Acquire Estrogen",
-	"advancement.hextrogen.unlock_page.description": "I feel more... aerodynamic.",
+	"advancement.hextrogen.dash.title": "Breaking Inertia",
+	"advancement.hextrogen.dash.description": "Dash using the power of estrogen!",
 	"hextrogen.page.estrogen.title": "Dashing",
 	"hextrogen.page.estrogen.0": "After $(item)Estrogen$(), I seem to have unlocked a peculiar ability to $(#ac3232)Dash$() by tapping $(thing)$(k:estrogen.dash)$().$(br2)$(#ac3232)Dashing$() grants me a sudden burst of momentum for a few moments, during which my velocity can not be altered. _Media being the energy of thought, I can use _Hexcasting to stimulate the area of my brain responsible for this ability, with a surprising amount of directional control.",
 	"hexcasting.action.hextrogen:dash": "Dash",

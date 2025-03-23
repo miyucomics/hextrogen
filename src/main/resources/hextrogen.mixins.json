@@ -3,8 +3,9 @@
 	"package": "miyucomics.hextrogen.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"minVersion": "0.8",
-	"mixins": [
-		"ClientDashAccessor"
+	"client": [
+		"ClientDashAccessor",
+		"ClientDashMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
