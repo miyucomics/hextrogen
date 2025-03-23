@@ -1,0 +1,37 @@
+{
+	"criteria": {
+		"root": {
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"estrogen:liquid_estrogen_bucket",
+							"estrogen:estrogen_pill_block",
+							"estrogen:estrogen_patches",
+							"estrogen:estrogen_chip_cookie",
+							"estrogen:crystal_estrogen_pill",
+							"estrogen:estrogen_pill"
+						]
+					}
+				]
+			},
+			"trigger": "minecraft:inventory_changed"
+		}
+	},
+	"display": {
+		"announce_to_chat": true,
+		"title": {
+			"translate": "advancement.hextrogen.unlock_page.title"
+		},
+		"description": {
+			"translate": "advancement.hextrogen.unlock_page.description"
+		},
+		"icon": {
+			"item": "estrogen:estrogen_pill"
+		},
+		"frame": "task",
+		"hidden": false,
+		"show_toast": true
+	},
+	"requirements": [["root"]]
+}
