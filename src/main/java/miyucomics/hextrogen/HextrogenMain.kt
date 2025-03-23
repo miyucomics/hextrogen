@@ -28,7 +28,7 @@ class HextrogenMain : ModInitializer {
 	}
 
 	companion object {
-		private const val MOD_ID: String = "hextrogen"
+		const val MOD_ID: String = "hextrogen"
 		fun id(string: String) = ResourceLocation(MOD_ID, string)
 
 		@JvmField
