@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "hextrogen",
+	"version": "${version}",
+	"name": "Hextrogen",
+	"description": "Tiny little Hexcasting addon that interoperates with Create: Estrogen, adding a spell to trigger a dash for free, as well as a spell to refresh all your dashes for the price of one charged amethyst.",
+	"authors": [
+		"miyucomics"
+	],
+	"contact": {
+		"homepage": "https://github.com/miyucomics/hextrogen",
+		"sources": "https://github.com/miyucomics/hextrogen"
+	},
+	"license": "MIT",
+	"icon": "assets/hextrogen/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"adapter": "kotlin",
+				"value": "miyucomics.hextrogen.HextrogenMain"
+			}
+		],
+		"client": [
+			{
+				"adapter": "kotlin",
+				"value": "miyucomics.hextrogen.HextrogenClient"
+			}
+		]
+	},
+	"mixins": [
+		"hextrogen.mixins.json"
+	],
+	"depends": {
+		"minecraft": "1.20.1",
+		"fabricloader": ">=0.16.7",
+		"fabric-api": "*",
+		"fabric-language-kotlin": ">=1.10.10+kotlin.1.9.10",
+		"hexcasting": ">=0.11.1-7-pre-646"
+	}
+}
