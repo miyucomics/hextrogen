@@ -6,6 +6,7 @@ import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.getVec3
 import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.mishaps.MishapBadCaster
+import dev.mayaqq.estrogen.registry.EstrogenEffects
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking
 import net.minecraft.server.level.ServerPlayer
@@ -17,6 +18,8 @@ class OpDash : SpellAction {
 	override fun execute(args: List<Iota>, env: CastingEnvironment): SpellAction.Result {
 		if (env.castingEntity !is Player)
 			throw MishapBadCaster()
+		if (!env.castingEntity!!.hasEffect(EstrogenEffects.ESTROGEN_EFFECT.get()))
+			throw NoEstrogenMishap()
 		val direction = args.getVec3(0, argc)
 		return SpellAction.Result(Spell(direction.normalize()), 0, listOf())
 	}
