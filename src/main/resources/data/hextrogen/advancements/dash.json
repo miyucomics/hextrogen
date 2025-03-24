@@ -19,5 +19,6 @@
 		"hidden": false,
 		"show_toast": true
 	},
+	"parent": "hexcasting:root",
 	"requirements": [["root"]]
 }
