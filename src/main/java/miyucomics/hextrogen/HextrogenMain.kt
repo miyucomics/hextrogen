@@ -4,21 +4,9 @@ import at.petrak.hexcasting.api.casting.ActionRegistryEntry
 import at.petrak.hexcasting.api.casting.math.HexDir
 import at.petrak.hexcasting.api.casting.math.HexPattern
 import at.petrak.hexcasting.common.lib.hex.HexActions
-import com.google.gson.JsonObject
 import net.fabricmc.api.ModInitializer
-import net.fabricmc.fabric.api.networking.v1.PacketSender
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking
-import net.minecraft.advancements.CriteriaTriggers
-import net.minecraft.advancements.critereon.AbstractCriterionTriggerInstance
-import net.minecraft.advancements.critereon.ContextAwarePredicate
-import net.minecraft.advancements.critereon.DeserializationContext
-import net.minecraft.advancements.critereon.SimpleCriterionTrigger
 import net.minecraft.core.Registry
-import net.minecraft.network.FriendlyByteBuf
 import net.minecraft.resources.ResourceLocation
-import net.minecraft.server.MinecraftServer
-import net.minecraft.server.level.ServerPlayer
-import net.minecraft.server.network.ServerGamePacketListenerImpl
 
 class HextrogenMain : ModInitializer {
 	override fun onInitialize() {
