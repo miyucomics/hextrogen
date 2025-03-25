@@ -2,7 +2,7 @@
 	"name": "hextrogen.page.estrogen.title",
 	"icon": "minecraft:firework_rocket",
 	"category": "hexcasting:patterns/spells",
-	"advancement": "hextrogen:dash",
+	"advancement": "hexcasting:root",
 	"sortnum": 0,
 	"pages": [
 		{

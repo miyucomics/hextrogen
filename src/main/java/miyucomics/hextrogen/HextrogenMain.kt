@@ -24,26 +24,12 @@ class HextrogenMain : ModInitializer {
 	override fun onInitialize() {
 		Registry.register(HexActions.REGISTRY, id("dash"), ActionRegistryEntry(HexPattern.fromAngles("qaqqqqdweee", HexDir.NORTH_EAST), OpDash()))
 		Registry.register(HexActions.REGISTRY, id("refresh_dashes"), ActionRegistryEntry(HexPattern.fromAngles("qaqqeawawa", HexDir.NORTH_EAST), OpRefreshDashes()))
-		ServerPlayNetworking.registerGlobalReceiver(DASH_CHANNEL) { _: MinecraftServer, player: ServerPlayer, _: ServerGamePacketListenerImpl, _: FriendlyByteBuf, _: PacketSender -> DASH_CRITERION.grant(player) }
 	}
 
 	companion object {
 		const val MOD_ID: String = "hextrogen"
 		fun id(string: String) = ResourceLocation(MOD_ID, string)
-
-		@JvmField
 		val DASH_CHANNEL: ResourceLocation = id("dash")
 		val REFRESH_DASHES_CHANNEL: ResourceLocation = id("refresh_dashes")
-		val DASH_CRITERION: DashCriterion = CriteriaTriggers.register(DashCriterion())
-	}
-}
-
-class DashCriterion : SimpleCriterionTrigger<DashCriterion.Condition>() {
-	fun grant(player: ServerPlayer) { trigger(player) { true } }
-	override fun getId() = HextrogenMain.id("dash")
-	override fun createInstance(json: JsonObject, predicate: ContextAwarePredicate, deserializationContext: DeserializationContext) = Condition(predicate)
-	class Condition(predicate: ContextAwarePredicate) : AbstractCriterionTriggerInstance(ID, predicate)
-	companion object {
-		val ID: ResourceLocation = HextrogenMain.id("dash")
 	}
 }
