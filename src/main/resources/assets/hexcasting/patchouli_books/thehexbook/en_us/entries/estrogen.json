@@ -1,6 +1,6 @@
 {
 	"name": "hextrogen.page.estrogen.title",
-	"icon": "minecraft:firework_rocket",
+	"icon": "estrogen:textures/mob_effect/estrogen.png",
 	"category": "hexcasting:patterns/spells",
 	"advancement": "hexcasting:root",
 	"sortnum": 0,
@@ -25,7 +25,7 @@
 			"type": "hexcasting:pattern",
 			"op_id": "hextrogen:refresh_dashes",
 			"anchor": "hextrogen:refresh_dashes",
-			"input": "",
+			"input": "entity",
 			"output": "",
 			"text": "hextrogen.page.refresh_dashes.summary"
 		}
