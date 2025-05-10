@@ -27,7 +27,6 @@ repositories {
 	maven { url = "https://maven.teamresourceful.com/repository/maven-public" }
 	maven { url = "https://maven.parchmentmc.org" }
 	maven { url = "https://maven.is-immensely.gay/nightly"}
-
 	maven {
 		url = "https://jitpack.io/"
 		content { includeGroupAndSubgroups("com.github") }
@@ -44,27 +43,27 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 	modImplementation "net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}"
 
-	implementation "com.teamresourceful:resourceful-cosmetics-4j:$resourceful_cosmetics_version"
-	modApi "com.teamresourceful.resourcefullib:resourcefullib-fabric-$minecraft_version:$resourcefullib_version"
-	modApi "earth.terrarium.botarium:botarium-fabric-$minecraft_version:$botarium_version"
-	modApi "uwu.serenity.critter:critter-fabric:$critter_version"
-	modImplementation "dev.emi:trinkets:${trinkets_version}"
 	modImplementation "com.simibubi.create:create-fabric-$minecraft_version:$create_version"
-	modImplementation "earth.terrarium.baubly:baubly-common-$minecraft_version:$baubly_version" transitive false
-	modImplementation "earth.terrarium.baubly:baubly-fabric-$minecraft_version:$baubly_version" transitive false
+	modImplementation "uwu.serenity.critter:critter-fabric:$critter_version"
 	modImplementation "maven.modrinth:estrogen:$estrogen_version-fabric"
-
 	modImplementation("at.petra-k.hexcasting:hexcasting-fabric-$minecraft_version:$hexcasting_version") {
 		exclude module: "phosphor"
 		exclude module: "lithium"
 		exclude module: "emi"
 	}
-	modLocalRuntime "at.petra-k.paucal:paucal-fabric-$minecraft_version:$paucal_version"
-	modLocalRuntime "vazkii.patchouli:Patchouli:$minecraft_version-$patchouli_version-FABRIC"
+	modImplementation "com.teamresourceful.resourcefullib:resourcefullib-fabric-$minecraft_version:$resourcefullib_version"
+
+	modLocalRuntime "earth.terrarium.baubly:baubly-common-$minecraft_version:$baubly_version" transitive false
+	modLocalRuntime "earth.terrarium.baubly:baubly-fabric-$minecraft_version:$baubly_version" transitive false
+	modLocalRuntime "earth.terrarium.botarium:botarium-fabric-$minecraft_version:$botarium_version"
 	modLocalRuntime "dev.onyxstudios.cardinal-components-api:cardinal-components-api:$cardinal_components_version"
 	modLocalRuntime "me.shedaniel.cloth:cloth-config-fabric:$cloth_config_version"
 	modLocalRuntime "com.samsthenerd.inline:inline-fabric:$minecraft_version-$inline_version"
+	modLocalRuntime "at.petra-k.paucal:paucal-fabric-$minecraft_version:$paucal_version"
+	modLocalRuntime "vazkii.patchouli:Patchouli:$minecraft_version-$patchouli_version-FABRIC"
+	modLocalRuntime "com.teamresourceful:resourceful-cosmetics-4j:$resourceful_cosmetics_version"
 	modLocalRuntime files("${rootProject.rootDir}/libs/serialization-hooks-0.4.99999.jar")
+	modLocalRuntime "dev.emi:trinkets:${trinkets_version}"
 }
 
 processResources {
