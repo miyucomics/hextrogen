@@ -1,9 +1,9 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	id "fabric-loom" version "1.7-SNAPSHOT"
+	id "fabric-loom" version "1.9-SNAPSHOT"
 	id "maven-publish"
-	id "org.jetbrains.kotlin.jvm" version "1.8.0"
+	id "org.jetbrains.kotlin.jvm" version "2.2.21"
 }
 
 version = project.mod_version
@@ -31,6 +31,7 @@ repositories {
 		url = "https://jitpack.io/"
 		content { includeGroupAndSubgroups("com.github") }
 	}
+	maven { url = "https://maven.hexxy.media" }
 }
 
 dependencies {
@@ -62,7 +63,7 @@ dependencies {
 	modLocalRuntime "at.petra-k.paucal:paucal-fabric-$minecraft_version:$paucal_version"
 	modLocalRuntime "vazkii.patchouli:Patchouli:$minecraft_version-$patchouli_version-FABRIC"
 	modLocalRuntime "com.teamresourceful:resourceful-cosmetics-4j:$resourceful_cosmetics_version"
-	modLocalRuntime files("${rootProject.rootDir}/libs/serialization-hooks-0.4.99999.jar")
+	modLocalRuntime "io.github.tropheusj:serialization-hooks:0.4.99999"
 	modLocalRuntime "dev.emi:trinkets:${trinkets_version}"
 }
 
